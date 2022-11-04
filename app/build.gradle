@@ -6,6 +6,11 @@ android {
     namespace 'com.chope.cicddemo'
     compileSdk 32
 
+    lintOptions {
+        baseline file("lint-baseline.xml")// if true, stop the gradle build if errors are found
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.chope.cicddemo"
         minSdk 21
